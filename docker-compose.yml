@@ -1,0 +1,13 @@
+# docker-compose.yml
+
+demo-app:
+  build: ./demo
+  container_name: demo-app
+  environment:
+    - DOMAIN=http://localhost
+
+  ports:
+    - "80:5000"
+  volumes:
+    - ./demo/src:/home/app/webapp/src
+    - ./log:/home/app/webapp/log
