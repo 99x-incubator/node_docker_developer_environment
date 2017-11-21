@@ -2,6 +2,8 @@
 # are running the same version of Node.
 FROM node:7.8.0
 
+RUN apt-get update && apt-get install -y rsync
+
 # Override the base log level (info).
 ENV NPM_CONFIG_LOGLEVEL warn
 
